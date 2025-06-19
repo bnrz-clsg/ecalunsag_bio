@@ -2,7 +2,7 @@ name: Deploy Flutter Web to GitHub Pages
 
 on:
   push:
-    branches: [me_dev]  # Trigger this action on pushes to me_dev
+    branches: [me_dev]
 
 jobs:
   build_and_deploy:
@@ -15,8 +15,13 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: 'beta'
-          channel: 'beta'
+          flutter-version: any  # allows fetching from any channel
+
+      - name: Upgrade to Beta Channel with Dart 3.5
+        run: |
+          flutter channel beta
+          flutter upgrade
+          flutter --version
 
       - name: Install Dependencies
         run: flutter pub get
