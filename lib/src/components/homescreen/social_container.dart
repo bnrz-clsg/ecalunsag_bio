@@ -46,6 +46,13 @@ class SocialContainer extends StatelessWidget {
               Utils.launchUrlHelper('https://github.com/bnrz-clsg');
             },
           ),
+          if (Responsive.isDesktop(context))
+            Column(
+              children: [
+                const SizedBox(width: 15),
+              ],
+            ),
+          Image.asset("assets/images/logo.png")
         ],
       ),
     );
