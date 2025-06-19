@@ -11,36 +11,35 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: SingleChildScrollView(
-        padding: EdgeInsets.only(right: defaultPadding / 2),
-        child: Responsive.isDesktop(context)
-            ? Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    flex: 2,
-                    child: MyExperience(),
-                  ),
-                  SizedBox(
-                    width: defaultPadding,
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: MyCertificates(),
-                  )
-                ],
-              )
-            : Column(
+      child: Responsive.isDesktop(context)
+          ? Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(
+                  flex: 2,
+                  child: MyExperience(),
+                ),
+                SizedBox(
+                  width: defaultPadding / 2,
+                ),
+                Expanded(
+                  flex: 1,
+                  child: MyCertificates(),
+                )
+              ],
+            )
+          : SingleChildScrollView(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   MyExperience(),
                   SizedBox(
-                    width: defaultPadding,
+                    width: defaultPadding / 2,
                   ),
                   MyCertificates()
                 ],
               ),
-      ),
+            ),
     );
   }
 }

@@ -14,13 +14,16 @@ class MainScreen extends StatelessWidget {
       appBar: Responsive.isDesktop(context)
           ? null
           : AppBar(
-              backgroundColor: bgColor,
+              backgroundColor: darkColor,
               leading: Builder(
                 builder: (context) => IconButton(
                   onPressed: () {
                     Scaffold.of(context).openDrawer();
                   },
-                  icon: Icon(Icons.menu),
+                  icon: Icon(
+                    Icons.arrow_forward_ios,
+                    color: bgColor,
+                  ),
                 ),
               ),
             ),

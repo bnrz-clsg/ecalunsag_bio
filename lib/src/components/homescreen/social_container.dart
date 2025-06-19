@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../responsive.dart';
+import '../../utils/utils.dart';
 
 // import '../utils/utils.dart'; // Use FontAwesome icons
 
@@ -19,31 +20,32 @@ class SocialContainer extends StatelessWidget {
           _SocialIconButton(
             icon: Icons.email_outlined,
             onPressed: () {
-              // Utils.launchUrlHelper('mailto:pangmalakasangreview@sirjed.com');
+              Utils.launchUrlHelper('mailto:e.calunsag12@gmail.com');
+            },
+          ),
+          const SizedBox(width: 15),
+          _SocialIconButton(
+            icon: FontAwesomeIcons.linkedinIn,
+            onPressed: () {
+              Utils.launchUrlHelper(
+                  'https://linkedin.com/in/ebenezer-calunsagg-92095924b');
             },
           ),
           const SizedBox(width: 15),
           _SocialIconButton(
             icon: FontAwesomeIcons.behance,
             onPressed: () {
-              // Utils.launchUrlHelper('https://www.tiktok.com/@jedcalunsagprc');
+              Utils.launchUrlHelper(
+                  'https://www.behance.net/gallery/126844463/LOGO');
             },
           ),
           const SizedBox(width: 15),
           _SocialIconButton(
             icon: FontAwesomeIcons.github,
             onPressed: () {
-              // Utils.launchUrlHelper('https://www.facebook.com/100094412479690');
+              Utils.launchUrlHelper('https://github.com/bnrz-clsg');
             },
           ),
-          const SizedBox(width: 15),
-          _SocialIconButton(
-            icon: FontAwesomeIcons.xTwitter,
-            onPressed: () {
-              // Utils.launchUrlHelper('https://x.com/jedcalunsag?lang=en');
-            },
-          ),
-          const SizedBox(width: 15),
         ],
       ),
     );

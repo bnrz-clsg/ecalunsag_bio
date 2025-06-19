@@ -28,11 +28,9 @@ class _ExperienceContainerState extends State<ExperienceContainer> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      // padding: const EdgeInsets.all(defaultPadding),
-      // elevation: 1,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      color: const Color.fromARGB(255, 253, 253, 253),
+    return SizedBox(
+      // shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+      // color: const Color.fromARGB(255, 253, 253, 253),
       child: Padding(
         padding: const EdgeInsets.all(defaultPadding),
         child: Column(
@@ -92,6 +90,7 @@ class _ExperienceContainerState extends State<ExperienceContainer> {
                 style: TextStyle(color: primaryColor),
               ),
             ),
+            Divider(thickness: 0.5, color: textColor)
           ],
         ),
       ),
