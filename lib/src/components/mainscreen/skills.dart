@@ -1,5 +1,5 @@
 import 'package:ecalunsag_bio/src/components/mainscreen/coding.dart';
-import 'package:ecalunsag_bio/src/components/mainscreen/funtional_skills.dart';
+import 'package:ecalunsag_bio/src/components/mainscreen/functional_skills.dart';
 import 'package:ecalunsag_bio/src/components/widgets/title_text.dart';
 import 'package:flutter/material.dart';
 import '../../constant.dart';
@@ -49,7 +49,7 @@ class Skills extends StatelessWidget {
             padding: const EdgeInsets.only(top: defaultPadding),
             child: Coding(),
           ),
-          FuntionalSkills()
+          FunctionalSkills()
         ],
       ),
     );

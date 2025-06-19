@@ -3,8 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../constant.dart';
 import '../widgets/title_text.dart';
 
-class FuntionalSkills extends StatelessWidget {
-  const FuntionalSkills({super.key});
+class FunctionalSkills extends StatelessWidget {
+  const FunctionalSkills({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +13,7 @@ class FuntionalSkills extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.only(bottom: defaultPadding / 2),
-          child: TitleText(text: "FUNTIONAL SKILLS"),
+          child: TitleText(text: "FUNCTIONAL SKILLS"),
         ),
         _functionalSkillText("Software Development Lifecycle (SDLC)"),
         _functionalSkillText("UI/UX Design Implementation"),
