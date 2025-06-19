@@ -1,3 +1,3 @@
 # ecalunsag_bio
 
-A new Flutter project.
+Web app for Ebenezer's profile
