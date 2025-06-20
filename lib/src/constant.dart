@@ -11,3 +11,7 @@ const defaultDuration = Duration(seconds: 1);
 
 const maxWidth = 1440.0;
 const defaultPadding = 20.0;
+
+
+// #1EC340
+// #070707

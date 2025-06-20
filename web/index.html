@@ -1,40 +1,112 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+  <head>
+    <base href="/ecalunsag_bio/" />
+    <meta charset="UTF-8" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta name="description" content="EBENEZER CALUNSAG BIO" />
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <!-- iOS meta tags & icons -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Ebenezer's bio" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png" />
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/ecalunsag_bio/">
-  
+    <title>Ebenezer's bio</title>
+    <link rel="manifest" href="manifest.json" />
 
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #070707;
+        height: 100%;
+        width: 100%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="EBENEZER CALUNSAG BIO">
+      #loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #070707;
+        color: white;
+      }
 
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Ebenezer's bio">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+      .logo-row {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+      .logo-row img {
+        width: 35px;
+        height: 35px;
+      }
 
-  <title>Ebenezer's bio</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+      .logo-row h1 {
+        margin: 0;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: white;
+      }
+
+      .progress-container {
+        margin-top: 24px;
+        width: 200px;
+        height: 6px;
+        background-color: #1a1a1a;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+
+      .progress-bar {
+        height: 100%;
+        width: 0%;
+        background-color: #1ec340;
+        animation: loadProgress 2s ease-out forwards;
+      }
+
+      @keyframes loadProgress {
+        from {
+          width: 0%;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loader">
+      <div class="logo-row">
+        <img src="favicon.png" alt="logo" />
+        <h1>Ebenezer Calunsag</h1>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar"></div>
+      </div>
+    </div>
+
+    <script>
+      // Delay Flutter load by 2 seconds (2000ms)
+      setTimeout(function () {
+        const loader = document.getElementById("loader");
+        loader.style.display = "none";
+
+        // Start Flutter after splash
+        const script = document.createElement("script");
+        script.src = "flutter_bootstrap.js";
+        script.async = true;
+        document.body.appendChild(script);
+      }, 2000);
+    </script>
+  </body>
 </html>
