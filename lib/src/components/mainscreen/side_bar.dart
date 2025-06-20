@@ -23,53 +23,49 @@ class SideBar extends StatelessWidget {
           bottomRight: Radius.circular(12.0),
         ),
       ),
-      child: Expanded(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Image.asset(
-                "assets/images/iam_me.png",
-                fit: BoxFit.cover,
-              ),
-              // MyInfo(),
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                    horizontal: defaultPadding, vertical: defaultPadding),
-                child: Column(
-                  children: [
-                    PersonalInfo(), // Personal info
-                    Divider(color: secondaryColor),
-                    EducationAndCertificate(), // Education and Certificate
-                    Divider(color: secondaryColor),
-                    Skills(), //Skills
-                    Divider(color: secondaryColor),
-                    TextButton(
-                      onPressed: () {},
-                      child: FittedBox(
-                        child: Row(
-                          children: [
-                            Text(
-                              "DOWNLOAD CV",
-                              style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyLarge!
-                                    .color,
-                              ),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Image.asset(
+              "assets/images/iam_me.png",
+              fit: BoxFit.cover,
+            ),
+            // MyInfo(),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: defaultPadding, vertical: defaultPadding),
+              child: Column(
+                children: [
+                  PersonalInfo(), // Personal info
+                  Divider(color: secondaryColor),
+                  EducationAndCertificate(), // Education and Certificate
+                  Divider(color: secondaryColor),
+                  Skills(), //Skills
+                  Divider(color: secondaryColor),
+                  TextButton(
+                    onPressed: () {},
+                    child: FittedBox(
+                      child: Row(
+                        children: [
+                          Text(
+                            "DOWNLOAD CV",
+                            style: TextStyle(
+                              color:
+                                  Theme.of(context).textTheme.bodyLarge!.color,
                             ),
-                            SizedBox(width: defaultPadding / 2),
-                            SvgPicture.asset("assets/icons/download.svg")
-                          ],
-                        ),
+                          ),
+                          SizedBox(width: defaultPadding / 2),
+                          SvgPicture.asset("assets/icons/download.svg")
+                        ],
                       ),
                     ),
-                    if (!Responsive.isDesktop(context))
-                      Center(child: SocialContainer()),
-                  ],
-                ),
-              )
-            ],
-          ),
+                  ),
+                  if (!Responsive.isDesktop(context))
+                    Center(child: SocialContainer()),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
