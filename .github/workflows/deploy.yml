@@ -17,19 +17,17 @@ jobs:
         with:
           flutter-version: any
 
-      - name: Upgrade to Beta Channel with Dart 3.5
-        run: |
-          flutter channel beta
-          flutter upgrade
-          flutter --version
-
       - name: Install Dependencies
         run: flutter pub get
 
-      - name: Build Web
+      - name: Enable Web & Build
         run: |
           flutter config --enable-web
-          flutter build web --release --base-href="/ecalunsag_bio/"
+          flutter build web --release
+
+      - name: Inject base href for GitHub Pages
+        run: |
+          sed -i 's|<!-- <base href=.*> -->|<base href="/ecalunsag_bio/">|' build/web/index.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
