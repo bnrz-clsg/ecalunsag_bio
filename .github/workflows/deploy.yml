@@ -37,5 +37,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: build/web
           publish_branch: gh-pages
-          user_name: bnrz-clsg
+          user_name: ecalunsag
           user_email: e.calunsag12@gmail.com
