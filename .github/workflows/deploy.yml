@@ -15,7 +15,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: any  # allows fetching from any channel
+          flutter-version: any
 
       - name: Upgrade to Beta Channel with Dart 3.5
         run: |
@@ -29,7 +29,7 @@ jobs:
       - name: Build Web
         run: |
           flutter config --enable-web
-          flutter build web --release
+          flutter build web --release --base-href="/ecalunsag_bio/"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -38,4 +38,4 @@ jobs:
           publish_dir: build/web
           publish_branch: gh-pages
           user_name: bnrz-clsg
-          user_email: e.calunsag12@gmail.com  # Use your real email here
+          user_email: e.calunsag12@gmail.com
