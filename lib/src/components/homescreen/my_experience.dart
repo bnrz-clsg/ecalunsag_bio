@@ -1,4 +1,5 @@
 import 'package:ecalunsag_bio/src/components/widgets/experience_container.dart';
+import 'package:ecalunsag_bio/src/components/widgets/title_with_bg.dart';
 import 'package:flutter/material.dart';
 import '../../constant.dart';
 import '../../models/demo_my_experience.dart';
@@ -13,13 +14,14 @@ class MyExperience extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            "Experience",
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge
-                ?.copyWith(color: darkColor),
-          ),
+          TitleWithBg(text: "Experience"),
+          // Text(
+          //   "Experience",
+          //   style: Theme.of(context)
+          //       .textTheme
+          //       .titleLarge
+          //       ?.copyWith(color: darkColor),
+          // ),
           SizedBox(height: defaultPadding),
           // Expanded makes the list take remaining space and be scrollable
           ListView.builder(

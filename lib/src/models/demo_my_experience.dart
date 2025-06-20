@@ -47,7 +47,7 @@ List<ExperienceModel> demoMyExperiences = [
   ExperienceModel(
     company: "Sonrico",
     role: "Project Supervisor",
-    yearAttended: "Paranaque City • 2016 – 2017",
+    yearAttended: "Parañaque City • 2016 – 2017",
     contents: [
       ExperienceContent(
         title: "Responsibilities",

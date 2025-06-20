@@ -36,7 +36,7 @@ class PersonalInfo extends StatelessWidget {
           ),
           CustomTexedIcon(
             icon: Icons.pin_drop,
-            text: "4 Bethsaida St. Multinational Village, Parañaque City",
+            text: "Parañaque City, Philippines",
           ),
         ],
       ),
