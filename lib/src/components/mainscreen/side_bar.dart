@@ -7,10 +7,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../responsive.dart';
+import '../../services/file_downloader.dart';
 import '../homescreen/social_container.dart';
 
 class SideBar extends StatelessWidget {
   const SideBar({super.key});
+
+  void _downloadCV() {
+    FileDownloadService.downloadResumeFromDrive();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +48,7 @@ class SideBar extends StatelessWidget {
                   Skills(), //Skills
                   Divider(color: secondaryColor),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: _downloadCV,
                     child: FittedBox(
                       child: Row(
                         children: [
