@@ -19,6 +19,13 @@ List<ExperienceModel> demoMyExperiences = [
 ''',
       ),
       ExperienceContent(
+        title: "Accomplishments:",
+        description: '''
+• Successfully developed mobile applications for iOS and Android platforms, managing the project end-to-end, from inception to final delivery.
+• Designed and implemented a budget execution system for web, ensuring robust performance and user-friendly experience .
+''',
+      ),
+      ExperienceContent(
         title: "Technologies Used",
         description:
             "Flutter, Dart, Firebase, Visual Studio Code, Visual LANSA, MySQL",

@@ -38,7 +38,7 @@ class MainScreen extends StatelessWidget {
                     top: 0,
                     bottom: 0,
                     child: Container(
-                      width: 180.0,
+                      width: Responsive.isMobile(context) ? 80 : 180.0,
                       color: primaryColor,
                     )),
                 Row(
